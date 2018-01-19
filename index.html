@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<script>
+function $get(el)
+{
+    return document.getElementById(el);
+}
+
+function log(msg)
+{
+    if (console)
+        console.log(msg || '');
+        
+    $get('log').innerHTML += '<br/>' + (msg || '');
+    
+}
+</script>
+<body>
+    <h2>Try GH pages!</h2>
+    does it really work? <br/>
+    <button type="button" onclick="log('clicked!');">Click me</button>
+    <button type="button" onclick="$get('log').innerHTML = '';">Clear</button>
+
+    <div id="log"/>
+</body>
+</html>
